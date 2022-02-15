@@ -1,9 +1,13 @@
 <script>
- import { link } from 'svelte-routing';
+ import LinkToPage from "./LinkToPage.svelte";
  export let id;
  let promise;
  $: {
   promise = fetch(`https://swapi.dev/api/people/${id}`).then(x => x.json());
+ }
+
+ function getPlanetId(url) {
+   url.replace('https://swapi.dev/api/planets/','');
  }
 
 </script>
@@ -11,52 +15,59 @@
   <h2>Loading, please wait...</h2>
 {:then data} 
   <h2>{data.name}</h2>
+  <table>
+  <tr>
+    <td>Height</td>
+    <td>{data.height}</td>
+  </tr>
+  <tr>
+    <td>Mass:</td>
+    <td>{data.mass}</td>
+  </tr>
+  <tr>
+    <td>Hair Color:</td>
+    <td>{data.hair_color}</td>
+  </tr>
+  <tr>
+    <td>Skin Color:</td>
+    <td>{data.skin_color}</td>
+  </tr>
+  <tr>
+    <td>Eye Color:</td>
+    <td>{data.eye_color}</td>
+  </tr>
+  <tr>
+    <td>Birth Year:</td>
+    <td>{data.birth_year}</td>
+  </tr>
+  <tr>
+    <td>Gender:</td>
+    <td>{data.gender}</td>
+  </tr>
+  <tr>
+    <td>Home world:</td>
+    <td>
+      <LinkToPage type="planets" url="{data.homeworld}"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Films:</td>
+    <!-- <td><LinkToPage @items={data.films} /></td> -->
+  </tr>
+  <tr>
+    <td>Species:</td>
+    <!-- <td><LinkToPage @items={data.species} /></td> -->
+  </tr>
+  <tr>
+    <td>Vehicles:</td>
+    <!-- <td><LinkToPage @items={data.vehicles} /></td> -->
+  </tr>
+  <tr>
+    <td>Starships:</td>
+    <!-- <td><LinkToPage @items={data.starships} /></td> -->
+  </tr>
+  </table>
 
 {/await}
 
 
-<style>
-.list a {
-  cursor: pointer;
-  padding:0.5em 1em;
-  display: block;
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-.list a:hover {
-  background: var(--color-burnt-ember);
-}
-
-.list a.active {
-  background: var(--color-white);
-  color: var(--color-ember);
-}
-
-.search-wrapper label {
-  margin-left: 1em;
-}
-
-.search-box {
-  display: grid;
-  grid-template-columns: 240px 42px;
-}
-
-.search-field {
-    padding: 1em;
-    width: 240px;
-    margin-left: 1em;
-    border-radius: .25em;
-    margin-bottom: 1em;
-}
-
- .clear-button {
-   float: right;
-   font-size: 1.5em;
-   height: 42px;
-   width: 42px;
-   border-radius: .25em;
-   cursor: pointer;
-   color: var(--color-burnt-ember);
- }
-</style>
