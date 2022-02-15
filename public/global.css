@@ -1,0 +1,79 @@
+ :root {
+  --color-primary: #011627;
+    --color-secondary: #8b8c8a;
+    --color-danger: #e71d36;
+    --color-warning: #ff9f1c;
+    --color-info: #2ec4b6;
+    --color-background: #182b3a;
+    --color-black: #171817;
+    --color-overlay: rgba(253, 255, 252, 0.8);
+    --color-ember: #e04e39;
+    --color-burnt-ember: #9b2918;
+    --color-ember-white: #fdfdfd;
+    --color-white: #fff;
+}
+
+* {
+  margin:0;
+  padding:0;
+  border: none;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--color-ember);
+  color: var(--color-white);
+}
+
+main {
+}
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.left-panel {
+}
+
+.right-panel {
+  padding: 1em;
+  background: var(--color-white);
+  color: var(--color-ember);
+  /*height: 100vh;*/
+}
+
+.right-panel a {
+  color: var(--color-ember);
+}
+
+table td {
+  padding: .5em;
+}
+
+table tr td:nth-child(1) {
+  font-weight: bold;
+  color: var(--color-burnt-ember);
+}
+
+table tr::odd {
+  background: var(--color-burnt-ember);
+}
+
+table tr:even {
+  background: var(--color-ember);
+}
+
+table a {
+  text-decoration: underline;
+  cursor: pointer;
+  padding:.25em;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100%;
+}
+
