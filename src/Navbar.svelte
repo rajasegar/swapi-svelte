@@ -4,8 +4,9 @@
 <nav>
 <ul>
   <li><a href="/" use:link>Home</a></li>
-  <li><a href="planets" use:link>Planets</a></li>
-  <li><a href="people" use:link >People</a></li>
+  <li><a href="/planets" use:link>Planets</a></li>
+  <li><a href="/people" use:link >People</a></li>
+  <li><a href="/vehicles" use:link >Vehicles</a></li>
 </ul>
 </nav>
 <style>

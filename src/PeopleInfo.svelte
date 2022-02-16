@@ -52,19 +52,19 @@
   </tr>
   <tr>
     <td>Films:</td>
-    <!-- <td><LinkToPage @items={data.films} /></td> -->
+      <LinkToPage type="films" url="{data.films}"/>
   </tr>
   <tr>
     <td>Species:</td>
-    <!-- <td><LinkToPage @items={data.species} /></td> -->
+      <LinkToPage type="species" url="{data.species}"/>
   </tr>
   <tr>
     <td>Vehicles:</td>
-    <!-- <td><LinkToPage @items={data.vehicles} /></td> -->
+      <LinkToPage type="vehicles" url="{data.vehicles}"/>
   </tr>
   <tr>
     <td>Starships:</td>
-    <!-- <td><LinkToPage @items={data.starships} /></td> -->
+      <LinkToPage type="starships" url="{data.starships}"/>
   </tr>
   </table>
 

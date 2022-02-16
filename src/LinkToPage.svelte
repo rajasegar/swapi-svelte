@@ -33,6 +33,12 @@
   <p>Loading...</p>
 {:then data} 
   {#each data as person}
-    <a href="/{type}/{person.id}" use:link>{person.name}</a> 
+    <p><a href="/{type}/{person.id}" use:link>{person.name}</a></p> 
     {/each}
 {/await}
+
+<style>
+  p {
+  margin: .5em;
+  }
+</style>

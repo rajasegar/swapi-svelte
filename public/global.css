@@ -48,6 +48,7 @@ main {
 
 table td {
   padding: .5em;
+  vertical-align: baseline;
 }
 
 table tr td:nth-child(1) {

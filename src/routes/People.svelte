@@ -1,12 +1,13 @@
 <script>
  import { Router, Route } from 'svelte-routing';
 import PeopleInfo from "../PeopleInfo.svelte";
-import PeopleList from "../PeopleList.svelte";
+ /* import PeopleList from "../PeopleList.svelte"; */
+import ListComponent from '../ListComponent.svelte';
 
 </script>
 <div class="grid">
   <div class="left-panel">
-    <PeopleList/>
+    <ListComponent resource="people" />
   </div>
   <div class="right-panel">
     <Router>
